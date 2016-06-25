@@ -32,11 +32,6 @@
    </item>
    <item>
     <property name="text">
-     <string>Curso</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
      <string>Clase</string>
     </property>
    </item>
@@ -65,16 +60,6 @@
      <x>90</x>
      <y>80</y>
      <width>301</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="txtFecha">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>50</y>
-     <width>111</width>
      <height>20</height>
     </rect>
    </property>
@@ -240,6 +225,19 @@
    </property>
    <property name="text">
     <string>Nombre:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtFecha">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>50</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="inputMask">
+    <string>##/##/####</string>
    </property>
   </widget>
  </widget>

@@ -1,42 +1,41 @@
-#include "mantcurso.h"
-#include "ui_mantcurso.h"
+#include "agregarcurso.h"
+#include "ui_agregarcurso.h"
 
-MantCurso::MantCurso(QWidget *parent) :
+AgregarCurso::AgregarCurso(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::MantCurso)
+    ui(new Ui::AgregarCurso)
 {
     ui->setupUi(this);
 }
 
-
-MantCurso::~MantCurso()
+AgregarCurso::~AgregarCurso()
 {
     delete ui;
 }
 
-void MantCurso::on_btnSalir_clicked()
+void AgregarCurso::on_btnGuardar_clicked()
 {
-  this->close();
+
 }
 
-void MantCurso::on_cmbTipo_currentIndexChanged(const QString &arg1)
-{   ui->btnGuardar->setEnabled(true);
-    if(ui->cmbTipo->currentText()==""){
-    ui->cmbTipo->removeItem(0);
-    }
-    if(ui->cmbTipo->currentText() == "Curso"){
-        CursoWindows();
-    }
-    if(ui->cmbTipo->currentText() == "Clase"){
-        ClaseWindows();
-    }
-    if(ui->cmbTipo->currentText() == "Laboratorio"){
-        LabWindows();
-    }
+void AgregarCurso::on_cmbTipo_currentIndexChanged(const QString &arg1)
+{
+    ui->btnGuardar->setEnabled(true);
+        if(ui->cmbTipo->currentText()==""){
+        ui->cmbTipo->removeItem(0);
+        }
+        if(ui->cmbTipo->currentText() == "Curso"){
+            CursoWindows();
+        }
+        if(ui->cmbTipo->currentText() == "Clase"){
+            ClaseWindows();
+        }
+        if(ui->cmbTipo->currentText() == "Laboratorio"){
+            LabWindows();}
 }
 
-
-void MantCurso::CursoWindows(){
+void AgregarCurso::CursoWindows()
+{
     ui->lblNumClase->setVisible(false);
     ui->txtNumClase->setVisible(false);
     ui->lblInstructor->setVisible(false);
@@ -47,7 +46,8 @@ void MantCurso::CursoWindows(){
 
 
 
-void MantCurso::ClaseWindows(){
+void AgregarCurso::ClaseWindows()
+{
     ui->lblNumClase->setVisible(true);
     ui->txtNumClase->setVisible(true);
     ui->lblInstructor->setVisible(true);
@@ -57,7 +57,8 @@ void MantCurso::ClaseWindows(){
     ui->lblNumClase->setText("Num. Clase:");
 }
 
-void MantCurso::LabWindows(){
+void AgregarCurso::LabWindows()
+{
     ui->lblNumClase->setVisible(true);
     ui->txtNumClase->setVisible(true);
     ui->lblInstructor->setVisible(true);

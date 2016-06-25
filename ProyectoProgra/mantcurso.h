@@ -1,6 +1,7 @@
 #ifndef MANTCURSO_H
 #define MANTCURSO_H
 
+#include <mainwindow.h>
 #include <QDialog>
 
 namespace Ui {

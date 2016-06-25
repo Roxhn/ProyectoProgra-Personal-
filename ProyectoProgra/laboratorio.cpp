@@ -13,8 +13,8 @@ Laboratorio::Laboratorio()
     strcpy(this->instructor,"");
 }
 
-Laboratorio:: Laboratorio(int codigo,char* nombre,char* fecha,int numLaboratorio,char* instructor)
-    : Curso(codigo,nombre,fecha){
+Laboratorio:: Laboratorio(int codigo,const char* nombre,int matriculados,const char* fecha,int numLaboratorio,const char* instructor)
+    : Curso(codigo,nombre,matriculados,fecha){
     this->numLaboratorio = numLaboratorio;
     strcpy(this->instructor,instructor);
 }
@@ -40,6 +40,8 @@ void Laboratorio::setInstructor(char * instructor){
 int Laboratorio::getNumLaboratorio() const{
     return this->numLaboratorio;
 }
+
+
 const char* Laboratorio::getInstructor() const{
     return this->instructor;
 }

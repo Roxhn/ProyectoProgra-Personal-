@@ -19,16 +19,22 @@ SOURCES += main.cpp\
     laboratorio.cpp \
     archivo.cpp \
     mantcurso.cpp \
-    buscar.cpp
+    buscar.cpp \
+    agregarcurso.cpp \
+    listaClase.cpp \
+    listalaboratorio.cpp
 
 HEADERS  += mainwindow.h \
     clase.h \
     curso.h \
     laboratorio.h \
-    archivo.h \
     mantcurso.h \
-    buscar.h
+    buscar.h \
+    agregarcurso.h \
+    listaClase.h \
+    listalaboratorio.h
 
 FORMS    += mainwindow.ui \
     mantcurso.ui \
-    buscar.ui
+    buscar.ui \
+    agregarcurso.ui

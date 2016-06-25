@@ -14,6 +14,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    void getData();
 
 private slots:
     void on_btnCerrar_clicked();
@@ -23,6 +24,10 @@ private slots:
     void on_btnArchivo_clicked();
 
     void on_btnBuscar_clicked();
+
+    void on_btnCursos_clicked();
+
+    void on_btnMatricular_clicked();
 
 private:
     Ui::MainWindow *ui;

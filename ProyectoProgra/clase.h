@@ -7,7 +7,7 @@ class Clase : public Curso
 {
 public:
     Clase();
-    Clase(int,char*,char*,int,char*,int);
+    Clase(int,const char*,int,const char*,int,const char*,int);
     virtual ~Clase();
     void setAula(int);
     void setCatedratico(char *);

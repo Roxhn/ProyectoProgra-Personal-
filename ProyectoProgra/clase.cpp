@@ -13,8 +13,8 @@ Clase :: Clase()
     this->dias = 0;
 }
 
-Clase :: Clase(int codigo,char* nombre,char* fecha,int aula,char* catedratico,int dias)
-    : Curso(codigo,nombre,fecha)
+Clase :: Clase(int codigo,const char* nombre,int matriculados,const char* fecha,int aula,const char* catedratico,int dias)
+    : Curso(codigo, nombre,matriculados,fecha)
 {
     this->aula = aula;
     strcpy(this->catedratico,catedratico);
